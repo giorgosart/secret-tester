@@ -7,6 +7,7 @@ Simple Python scripts to test whether your API keys are active and can make succ
 - **OpenAI API** - `test_openai_key.py`
 - **Facebook/Meta API** - `test_facebook_key.py`
 - **Sentry API** - `test_sentry_key.py`
+- **H&M API** - `test_hm_key.py`
 
 ## Setup
 
@@ -20,6 +21,7 @@ Simple Python scripts to test whether your API keys are active and can make succ
    - Replace `your-openai-api-key-here` with your actual OpenAI API key
    - Replace `your-facebook-access-token-here` with your actual Facebook/Meta access token
    - Replace `your-sentry-auth-token-here` with your actual Sentry auth token
+   - Replace `your-hm-api-key-here` with your actual H&M API key
 
 3. **Run the tests:**
    ```bash
@@ -31,6 +33,9 @@ Simple Python scripts to test whether your API keys are active and can make succ
    
    # Test Sentry auth token
    python test_sentry_key.py
+   
+   # Test H&M API key
+   python test_hm_key.py
    ```
 
 ## What the scripts do
@@ -64,6 +69,15 @@ Performs the following checks with detailed console logging:
 5. Displays organization details (slug, name, ID, status)
 6. Makes a test API call to fetch projects
 7. Shows "Active Secret" validation status (like GitHub Advanced Security)
+
+### H&M Test Script
+Performs the following checks with detailed console logging:
+1. Loads environment variables from the `.env` file
+2. Checks if the requests package is installed
+3. Verifies your API key is configured
+4. Makes a test API call to the H&M products endpoint
+5. Displays product information from the response
+6. Shows "Active Secret" validation status (like GitHub Advanced Security)
 
 ## Security Note
 
